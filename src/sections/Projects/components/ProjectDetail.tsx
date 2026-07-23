@@ -1,5 +1,5 @@
 import { SkillTag } from '../../../components/SkillTag'
-import { Navigate, useParams } from 'react-router-dom'
+import { Link, Navigate, useParams } from 'react-router-dom'
 import { projects } from '../../../data/projects'
 
 const ProjectDetail = () => {
@@ -12,7 +12,14 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="card-notch-lg border-border border bg-white p-11">
+    <div className="card-notch-lg m-auto w-full max-w-5xl px-8 py-16">
+      <Link
+        to={'/'}
+        className="text-navy hover:bg-navy mb-7 inline-flex cursor-pointer items-center gap-2 rounded-full bg-[#EEF3FA] px-8 py-2 text-sm hover:text-white"
+      >
+        ← voltar
+      </Link>
+
       <div className="text-gray-light mb-2.5 font-mono text-xs">
         {project.ref}
       </div>
@@ -37,14 +44,6 @@ const ProjectDetail = () => {
           </div>
           <div className="text-navy-deep mt-1 text-sm font-bold">
             {project.role}
-          </div>
-        </div>
-        <div className="dm-notch min-w-37.5 flex-1 bg-[#EEF3FA] px-4.5 py-3.5">
-          <div className="text-gray-light font-mono text-[10.5px] tracking-wide uppercase">
-            Stack principal
-          </div>
-          <div className="text-navy-deep mt-1 text-sm font-bold">
-            {project.stackSummary}
           </div>
         </div>
       </div>
