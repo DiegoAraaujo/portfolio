@@ -1,143 +1,82 @@
 export type TimelineIcon =
-  | "graduation"
-  | "briefcase"
-  | "event"
-  | "cloud"
-  | "clipboard"
-  | "compass"
-  | "flag";
+  | 'graduation'
+  | 'briefcase'
+  | 'event'
+  | 'cloud'
+  | 'clipboard'
+  | 'compass'
+  | 'flag'
 
 export interface TimelineEntry {
-  id: string;
-  year: string;
-  title: string;
-  cardDescription: string;
-  tagline: string;
-  detail: string;
-  highlights: string[];
-  side: "left" | "right";
-  current?: boolean;
-  icon: TimelineIcon;
+  id: string
+  year: string
+  title: string
+  cardDescription: string
+  tagline: string
+  detail: string
+  highlights: string[]
+  side: 'left' | 'right'
+  current?: boolean
+  icon: TimelineIcon
 }
 
 export const timeline: TimelineEntry[] = [
   {
-    id: "ifce-inicio",
-    year: "20XX",
-    title: "Início — Ciência da Computação, IFCE",
+    id: 'ifce-inicio',
+    year: '2023 – atual (7º semestre)',
+    title: 'Início — Ciência da Computação, Instituto Federal do Ceará (IFCE)',
     cardDescription:
-      "Começo da graduação, base em algoritmos, estrutura de dados e fundamentos de engenharia de software.",
-    tagline: "O ponto de partida da formação acadêmica.",
-    detail:
-      "Começo da graduação em Ciência da Computação, com base sólida em algoritmos, estruturas de dados, matemática discreta e fundamentos de engenharia de software — a fundação sobre a qual todos os projetos posteriores foram construídos.",
-    highlights: [
-      "Algoritmos e estruturas de dados",
-      "Fundamentos de engenharia de software",
-      "Lógica de programação e matemática discreta",
-    ],
-    side: "left",
-    icon: "graduation",
-  },
-  {
-    id: "compass-uol",
-    year: "20XX",
-    title: "Formação estruturada — Compass UOL",
-    cardDescription:
-      "Trilha de capacitação técnica intensiva, aprofundando prática de desenvolvimento full stack.",
+      'Início da graduação em 2023, com pesquisa acadêmica, projetos de extensão e disciplinas centrais da área.',
     tagline:
-      "Trilha intensiva de capacitação técnica em desenvolvimento full stack.",
+      'O ponto de partida da formação acadêmica, com pesquisa, extensão e disciplinas fundamentais.',
     detail:
-      "Participação em programa de formação estruturada, com prática guiada e mentoria, aprofundando habilidades de desenvolvimento full stack além do conteúdo acadêmico.",
+      'Início da graduação em Ciência da Computação pelo Instituto Federal do Ceará (IFCE) em 2023, atualmente cursando o 7º semestre. Ao longo do curso, participou de projetos de pesquisa com aprovação de artigos no CONNEPI e no ENCIFAT, além de projetos de extensão e disciplinas centrais para a área como estruturas de dados, banco de dados, grafos, desenvolvimento web e programação orientada a objetos.',
     highlights: [
-      "Prática orientada em projetos reais",
-      "Aprofundamento em desenvolvimento full stack",
-      "Contato com fluxos de trabalho de mercado",
+      'Artigos aprovados no CONNEPI e no ENCIFAT',
+      'Participação em projetos de extensão',
+      'Disciplinas de estruturas de dados, banco de dados, grafos, desenvolvimento web e programação orientada a objetos',
+      'Organização de hackathon junto com a equipe da faculdade',
     ],
-    side: "right",
-    icon: "briefcase",
+    side: 'left',
+    icon: 'graduation',
   },
   {
-    id: "devathon",
-    year: "20XX",
-    title: "Organização do Devathon",
+    id: 'compass-uol',
+    year: 'Jul 2025 – Dez 2025',
+    title: 'Estágio Fullstack — Compass UOL',
     cardDescription:
-      "Co-organização de hackathon no Ceará, com estudo de caso real de uma rede de alimentação.",
-    tagline: "Co-organização de hackathon no Ceará com estudo de caso real.",
+      'Trilha intensiva de treinamento fullstack remoto, com squads ágeis simulados, prática em autenticação, containerização, cloud e certificação AWS.',
+
+    tagline:
+      'Trilha intensiva de treinamento fullstack em squads ágeis simulados.',
     detail:
-      "Ajudou a organizar o Devathon, um hackathon com estudo de caso de uma rede de alimentação local, cuidando de planejamento, cronograma e apoio aos participantes durante o evento.",
+      'Estágio remoto de seis meses na Compass UOL, com trilha de treinamento intensivo em desenvolvimento fullstack: squads ágeis simulados com dailies, code reviews e gestão de tarefas via Trello, seguindo metodologia Scrum, em ambiente de formação sem entrega a clientes reais. Antes da implementação, identificou o risco de perda de sessão por ausência de persistência de login e propôs em code review a adoção de refresh token via cookie httpOnly, solução discutida e adotada pelo squad.',
     highlights: [
-      "Planejamento e execução de evento técnico",
-      "Definição do estudo de caso com o negócio parceiro",
-      "Coordenação de participantes e cronograma",
+      'Autenticação com JWT e proteção de rotas via middleware',
+      'Modelagem de dados não relacional com MongoDB',
+      'Containerização com Docker e infraestrutura AWS (EC2, S3)',
+      'Documentação de APIs com Swagger/OpenAPI',
+      'Interfaces fullstack para fluxo de e-commerce com React e TypeScript',
+      'Certificação AWS Cloud Practitioner conquistada durante o estágio',
     ],
-    side: "left",
-    icon: "event",
+    side: 'right',
+    icon: 'briefcase',
   },
   {
-    id: "aws-cert",
-    year: "20XX",
-    title: "Certificação AWS Cloud Practitioner",
-    cardDescription: "Certificação em fundamentos de nuvem AWS.",
-    tagline: "Certificação em fundamentos de nuvem AWS.",
-    detail:
-      "Certificação oficial da AWS cobrindo conceitos fundamentais de computação em nuvem, principais serviços (EC2, S3, IAM), modelo de responsabilidade compartilhada e boas práticas de custo e segurança.",
-    highlights: [
-      "Fundamentos de EC2, S3 e IAM",
-      "Modelo de responsabilidade compartilhada",
-      "Boas práticas de custo e segurança na nuvem",
-    ],
-    side: "right",
-    icon: "cloud",
-  },
-  {
-    id: "si-processo",
-    year: "2026",
-    title: "Processo técnico — SI Soluções Imobiliárias",
+    id: 'c4-fitness',
+    year: 'Set – Out 2025',
+    title: 'C4 FITNESS',
     cardDescription:
-      "Entrevista técnica para estágio Full Stack, com construção do SI CRM como projeto de avaliação.",
-    tagline: "Entrevista técnica para estágio Full Stack.",
+      'Desenvolvimento do C4 FITNESS, sistema de gestão para academias.',
+    tagline: 'Construção do C4 FITNESS, sistema de gestão para academias.',
     detail:
-      "Processo seletivo para estágio Full Stack, com construção do SI CRM como projeto de avaliação — um CRM em três camadas com microsserviço de IA. Incluiu preparação de apresentação técnica e mentoria durante o processo.",
+      'Entre setembro e outubro de 2025, construção do C4 FITNESS, sistema de gestão para academias, com foco em mostrar todos os clientes e seus status (normal, vencido, próximo de vencer), autenticação e um visual pensado para exibição em TV.',
     highlights: [
-      "Construção do SI CRM como case técnico",
-      "Apresentação técnica estruturada",
-      "Mentoria durante o processo seletivo",
+      'Visão de clientes por status: normal, vencido e próximo de vencer',
+      'Autenticação',
+      'Visual pensado para exibição em TV',
     ],
-    side: "left",
-    icon: "clipboard",
+    side: 'left',
+    icon: 'compass',
   },
-  {
-    id: "atual",
-    year: "Atual",
-    title: "C4 FITNESS & candidaturas ativas",
-    cardDescription:
-      "Desenvolvimento do C4 FITNESS e aplicação para vagas de desenvolvedor, incluindo processo na Zenir.",
-    tagline: "Desenvolvimento ativo e aplicação para vagas de desenvolvedor.",
-    detail:
-      "Momento atual: construção do C4 FITNESS, sistema de gestão para academias, em paralelo com candidaturas para vagas de desenvolvedor — incluindo processo em andamento na Zenir, para o qual construiu o projeto de portfólio stock-sync-api.",
-    highlights: [
-      "Desenvolvimento do C4 FITNESS em andamento",
-      "Candidatura ativa — Zenir (Desenvolvedor Python Júnior)",
-      "Portfólio técnico em expansão contínua",
-    ],
-    side: "right",
-    current: true,
-    icon: "compass",
-  },
-  {
-    id: "formatura",
-    year: "2027",
-    title: "Formatura prevista",
-    cardDescription: "Conclusão da graduação em Ciência da Computação.",
-    tagline: "Conclusão da graduação em Ciência da Computação.",
-    detail:
-      "Conclusão prevista da graduação em Ciência da Computação pelo IFCE, encerrando o ciclo acadêmico com um portfólio consistente de projetos reais entregues ao longo do curso.",
-    highlights: [
-      "Conclusão do curso — IFCE",
-      "Portfólio técnico consolidado",
-      "Transição para atuação profissional full time",
-    ],
-    side: "left",
-    icon: "flag",
-  },
-];
+]
