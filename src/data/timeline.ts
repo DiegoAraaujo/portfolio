@@ -64,16 +64,17 @@ export const timeline: TimelineEntry[] = [
   },
   {
     id: 'c4-fitness',
-    year: 'Set – Out 2025',
+    year: 'Set 2025 – Out 2025',
     title: 'C4 FITNESS',
     cardDescription:
-      'Desenvolvimento do C4 FITNESS, sistema de gestão para academias.',
+      'Desenvolvimento do C4 FITNESS, sistema de gestão para academias, com cadastro de clientes e verificação de status em segundos.',
     tagline: 'Construção do C4 FITNESS, sistema de gestão para academias.',
     detail:
-      'Entre setembro e outubro de 2025, construção do C4 FITNESS, sistema de gestão para academias, com foco em mostrar todos os clientes e seus status (normal, vencido, próximo de vencer), autenticação e um visual pensado para exibição em TV.',
+      'Entre setembro e outubro de 2025, construção do C4 FITNESS, sistema de gestão para academias, com cadastro de clientes e verificação de status de mensalidade (em dia, vencido, próximo de vencer). Reduziu de minutos para segundos o tempo de verificação se o cliente estava com a mensalidade em dia, além de um visual pensado para exibição em TV.',
     highlights: [
-      'Visão de clientes por status: normal, vencido e próximo de vencer',
-      'Autenticação',
+      'Cadastro de clientes',
+      'Status de mensalidade: em dia, vencido e próximo de vencer',
+      'Redução de minutos para segundos na verificação de mensalidade em dia',
       'Visual pensado para exibição em TV',
     ],
     side: 'left',
