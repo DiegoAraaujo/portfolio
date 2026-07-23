@@ -10,13 +10,13 @@ const CertCard = ({ certification }: CertCardProps) => (
       {certification.seal}
     </div>
     <div>
-      <div className="font-display text-navy-deep text-[15px] font-bold">
+      <p className="font-display text-navy-deep text-[15px] font-bold">
         {certification.name}
-      </div>
-      <div className="text-gray-light mt-1 font-mono text-[11.5px]">
+      </p>
+      <p className="text-gray-light mt-1 font-mono text-[11.5px]">
         {certification.issuer}
-      </div>
-      <div className="mt-2.5 flex flex-wrap items-center gap-3.5">
+      </p>
+      <p className="mt-2.5 flex flex-col gap-3.5">
         <span className="text-gray-light font-mono text-[11px]">
           Código: {certification.code}
         </span>
@@ -28,7 +28,7 @@ const CertCard = ({ certification }: CertCardProps) => (
         >
           Verificar certificado →
         </a>
-      </div>
+      </p>
     </div>
   </div>
 )
