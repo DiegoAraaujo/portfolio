@@ -3,7 +3,7 @@ import { SkillTag } from '../../components/SkillTag'
 import { technicalSkills } from '../../data/skills'
 
 const Skills = () => (
-  <section id="stack" className="py-16">
+  <section id="stack" className="m-auto w-full max-w-5xl px-8 py-16">
     <SectionHead
       eyebrow="// STACK & SOFT SKILLS"
       title="Com o que eu trabalho"
