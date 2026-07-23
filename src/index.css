@@ -12,7 +12,7 @@
   --color-border: #E6EAF0;
   --color-amber: #E0A64D;
   --color-green: #2E7D5B;
-
+  --color-blue: #2060B7;
   --font-display: "Space Grotesk", sans-serif;
   --font-serif: "Fraunces", serif;
   --font-body: "Inter", sans-serif;
@@ -36,9 +36,6 @@ body {
   color: #FFFFFF;
 }
 
-.page-bg {
-  background-image: repeating-linear-gradient(90deg, #FAFBFD 0px, #FAFBFD 64px, #FFFFFF 64px, #FFFFFF 128px);
-}
 
 @layer components {
   .skill-tag {
