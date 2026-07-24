@@ -75,7 +75,6 @@ export const technicalSkills: SkillGroup[] = [
       { label: 'Squads ágeis' },
       { label: 'IA Generativa' },
       { label: 'Spec-driven development' },
-
       { label: 'Groq SDK' },
       { label: 'LLaMA 3.3' },
     ],

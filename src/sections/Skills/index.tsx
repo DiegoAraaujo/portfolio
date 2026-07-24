@@ -2,12 +2,10 @@ import { SectionHead } from '../../components/SectionHead'
 import { SkillTag } from '../../components/SkillTag'
 import { technicalSkills } from '../../data/skills'
 
+// eyebrow="// STACK & SOFT SKILLS"
 const Skills = () => (
   <section id="stack" className="m-auto w-full max-w-5xl px-8 py-16">
-    <SectionHead
-      eyebrow="// STACK & SOFT SKILLS"
-      title="Com o que eu trabalho"
-    />
+    <SectionHead eyebrow="// STACK" title="Com o que eu trabalho" />
 
     <div>
       <div className="text-gray-light mb-4 font-mono text-[11.5px] tracking-wide uppercase">
