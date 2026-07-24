@@ -22,7 +22,7 @@ const TimelineItem = ({ entry }: TimelineItemProps) => {
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,rgba(255,255,255,0.55),transparent_55%)]" />
           <div className="pointer-events-none absolute inset-0 shadow-[inset_0_-3px_5px_rgba(0,0,0,0.15)]" />
           <div
-            className={`relative h-4.25 w-4.25 -rotate-45 transition-colors duration-300 ${entry.current ? 'text-white' : 'text-navy-soft group-hover:text-white'}`}
+            className={`relative flex h-full w-full -rotate-45 items-center justify-center transition-colors duration-300 ${entry.current ? 'text-white' : 'text-navy-soft group-hover:text-white'}`}
           >
             <Icon />
           </div>

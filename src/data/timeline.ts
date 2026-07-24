@@ -1,11 +1,4 @@
-export type TimelineIcon =
-  | 'graduation'
-  | 'briefcase'
-  | 'event'
-  | 'cloud'
-  | 'clipboard'
-  | 'compass'
-  | 'flag'
+export type TimelineIcon = 'graduation' | 'briefcase' | 'cloud'
 
 export interface TimelineEntry {
   id: string
@@ -30,7 +23,7 @@ export const timeline: TimelineEntry[] = [
     tagline:
       'O ponto de partida da formação acadêmica, com pesquisa, extensão e disciplinas fundamentais.',
     detail:
-      'Início da graduação em Ciência da Computação pelo Instituto Federal do Ceará (IFCE) em 2023, atualmente cursando o 7º semestre. Ao longo do curso, participou de projetos de pesquisa com aprovação de artigos no CONNEPI e no ENCIFAT, além de projetos de extensão e disciplinas centrais para a área como estruturas de dados, banco de dados, grafos, desenvolvimento web e programação orientada a objetos.',
+      'Início da graduação em Ciência da Computação pelo Instituto Federal do Ceará (IFCE) em 2023, atualmente cursando o 7º semestre. Ao longo do curso, participei de projetos de pesquisa com aprovação de artigos no CONNEPI e no ENCIFAT, além de projetos de extensão e disciplinas centrais para a área como estruturas de dados, banco de dados, grafos, desenvolvimento web e programação orientada a objetos.',
     highlights: [
       'Artigos aprovados no CONNEPI e no ENCIFAT',
       'Participação em projetos de extensão',
@@ -43,41 +36,40 @@ export const timeline: TimelineEntry[] = [
   {
     id: 'compass-uol',
     year: 'Jul 2025 – Dez 2025',
-    title: 'Estágio Fullstack — Compass UOL',
+    title: 'Certificação AWS Cloud Practitioner — Compass UOL',
     cardDescription:
-      'Trilha intensiva de treinamento fullstack remoto, com squads ágeis simulados, prática em autenticação, containerização, cloud e certificação AWS.',
-
+      'Certificação AWS Cloud Practitioner conquistada durante estágio fullstack remoto na Compass UOL.',
     tagline:
-      'Trilha intensiva de treinamento fullstack em squads ágeis simulados.',
+      'Certificação AWS Cloud Practitioner, conquistada durante estágio fullstack remoto.',
     detail:
-      'Estágio remoto de seis meses na Compass UOL, com trilha de treinamento intensivo em desenvolvimento fullstack: squads ágeis simulados com dailies, code reviews e gestão de tarefas via Trello, seguindo metodologia Scrum, em ambiente de formação sem entrega a clientes reais. Antes da implementação, identificou o risco de perda de sessão por ausência de persistência de login e propôs em code review a adoção de refresh token via cookie httpOnly, solução discutida e adotada pelo squad.',
+      'Durante o estágio remoto de seis meses na Compass UOL, conquistei a certificação AWS Cloud Practitioner, validando conhecimento em fundamentos de computação em nuvem, principais serviços (EC2, S3, IAM), modelo de responsabilidade compartilhada e boas práticas de custo e segurança. A certificação veio em paralelo à trilha de treinamento intensivo em desenvolvimento fullstack, com squads ágeis simulados, dailies, code reviews e gestão de tarefas via Trello, seguindo metodologia Scrum. Como projeto prático da trilha, participou da construção de um e-commerce simulando todo o fluxo real de compra: pesquisa e listagem de produtos, carrinho, login, checkout restrito a usuários autenticados e finalização da compra, com toda a infraestrutura hospedada na AWS e integrada ao S3.',
     highlights: [
+      'Certificação AWS Cloud Practitioner',
+      'Infraestrutura AWS (EC2, S3) aplicada em projeto real de e-commerce',
       'Autenticação com JWT e proteção de rotas via middleware',
       'Modelagem de dados não relacional com MongoDB',
-      'Containerização com Docker e infraestrutura AWS (EC2, S3)',
+      'Containerização com Docker',
       'Documentação de APIs com Swagger/OpenAPI',
-      'Interfaces fullstack para fluxo de e-commerce com React e TypeScript',
-      'Certificação AWS Cloud Practitioner conquistada durante o estágio',
     ],
     side: 'right',
-    icon: 'briefcase',
+    icon: 'cloud',
   },
   {
     id: 'c4-fitness',
     year: 'Set 2025 – Out 2025',
     title: 'C4 FITNESS',
     cardDescription:
-      'Desenvolvimento do C4 FITNESS, sistema de gestão para academias, com cadastro de clientes e verificação de status em segundos.',
-    tagline: 'Construção do C4 FITNESS, sistema de gestão para academias.',
+      'Desenvolvimento de um sistema de gestão para academias, com cadastro de clientes e acompanhamento do status das mensalidades em segundos.',
+    tagline: 'Construção de um sistema de gestão para academias.',
     detail:
-      'Entre setembro e outubro de 2025, construção do C4 FITNESS, sistema de gestão para academias, com cadastro de clientes e verificação de status de mensalidade (em dia, vencido, próximo de vencer). Reduziu de minutos para segundos o tempo de verificação se o cliente estava com a mensalidade em dia, além de um visual pensado para exibição em TV.',
+      'Entre setembro e outubro de 2025, construí um sistema de gestão para a C4 FITNESS, com cadastro de clientes e acompanhamento do status das mensalidades — em dia, vencidas ou próximas do vencimento. O sistema reduziu de minutos para segundos o tempo necessário para verificar a situação de cada cliente e contou com uma interface pensada para exibição em TV.',
     highlights: [
-      'Cadastro de clientes',
-      'Status de mensalidade: em dia, vencido e próximo de vencer',
-      'Redução de minutos para segundos na verificação de mensalidade em dia',
-      'Visual pensado para exibição em TV',
+      'CRUD completo de clientes',
+      'Acompanhamento do status das mensalidades: em dia, vencidas e próximas do vencimento',
+      'Redução de minutos para segundos na verificação da situação dos clientes',
+      'Interface otimizada para exibição em TV',
     ],
     side: 'left',
-    icon: 'compass',
+    icon: 'briefcase',
   },
 ]

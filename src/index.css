@@ -1,22 +1,22 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --color-navy: #16305A;
-  --color-navy-soft: #2E4A73;
-  --color-navy-deep: #0D1E38;
-  --color-steel: #5C86AC;
-  --color-ice: #CBDCEF;
-  --color-ink: #1C2430;
-  --color-gray: #66707C;
-  --color-gray-light: #9AA4B0;
-  --color-border: #E6EAF0;
-  --color-amber: #E0A64D;
-  --color-green: #2E7D5B;
-  --color-blue: #2060B7;
-  --font-display: "Space Grotesk", sans-serif;
-  --font-serif: "Fraunces", serif;
-  --font-body: "Inter", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --color-navy: #16305a;
+  --color-navy-soft: #2e4a73;
+  --color-navy-deep: #0d1e38;
+  --color-steel: #5c86ac;
+  --color-ice: #cbdcef;
+  --color-ink: #1c2430;
+  --color-gray: #66707c;
+  --color-gray-light: #9aa4b0;
+  --color-border: #e6eaf0;
+  --color-amber: #e0a64d;
+  --color-green: #2e7d5b;
+  --color-blue: #2060b7;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-serif: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 html {
@@ -26,45 +26,67 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--color-ink);
-  background: #FFFFFF;
+  background: #ffffff;
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
 }
 
-::selection {
-  background: var(--color-navy);
-  color: #FFFFFF;
+button {
+  cursor: pointer;
 }
 
+::selection {
+  background: var(--color-navy);
+  color: #ffffff;
+}
 
 @layer components {
   .skill-tag {
     font-family: var(--font-mono);
     font-size: 11.5px;
     color: var(--color-navy-soft);
-    background: #EEF3FA;
+    background: #eef3fa;
     padding: 6px 12px;
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+    clip-path: polygon(
+      6px 0,
+      100% 0,
+      100% calc(100% - 6px),
+      calc(100% - 6px) 100%,
+      0 100%,
+      0 6px
+    );
   }
 
   .pill-fact {
     font-size: 12.5px;
     color: var(--color-navy);
-    background: #EEF3FA;
+    background: #eef3fa;
     padding: 7px 15px;
     border-radius: 999px;
     font-weight: 500;
   }
 
   .card-notch {
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - 14px),
+      calc(100% - 14px) 100%,
+      0 100%
+    );
   }
 
   .card-notch-lg {
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), calc(100% - 28px) 100%, 0 100%);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - 28px),
+      calc(100% - 28px) 100%,
+      0 100%
+    );
   }
 
   .card-notch-sm {
@@ -72,7 +94,13 @@ body {
   }
 
   .soft-card-notch {
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - 18px),
+      calc(100% - 18px) 100%,
+      0 100%
+    );
   }
 
   .seal-notch {

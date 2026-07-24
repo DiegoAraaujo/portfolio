@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 const NAV_LINKS = [
   { href: '#about', label: 'Sobre Mim' },
@@ -8,22 +8,71 @@ const NAV_LINKS = [
   { href: '#certifications', label: 'Certificados' },
 ]
 
+interface IndicatorPosition {
+  left: number
+  width: number
+}
+
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeLink, setActiveLink] = useState<string | null>(null)
+
+  const navRef = useRef<HTMLUListElement>(null)
+
+  const [indicator, setIndicator] = useState<IndicatorPosition | null>(null)
 
   const closeMenu = () => {
     setMenuOpen(false)
   }
 
+  const moveIndicator = (target: HTMLElement, href: string) => {
+    if (!navRef.current) return
+
+    const navRect = navRef.current.getBoundingClientRect()
+    const linkRect = target.getBoundingClientRect()
+
+    setIndicator({
+      left: linkRect.left - navRect.left,
+      width: linkRect.width,
+    })
+
+    setActiveLink(href)
+  }
+
   return (
-    <header className="bg-navy-deep sticky top-0 z-100 rounded-b-[22px] px-8 py-4 sm:py-6">
+    <header className="bg-navy-deep shadow-navy sticky top-0 z-100 px-8 py-4 shadow-sm sm:py-6">
       <div className="m-auto flex w-full max-w-5xl items-center justify-between">
-        <ul className="hidden gap-6 text-sm text-[#B9C4D2] sm:flex">
+        <ul
+          ref={navRef}
+          onMouseLeave={() => {
+            setIndicator(null)
+            setActiveLink(null)
+          }}
+          className="relative hidden gap-6 text-sm text-[#B9C4D2] sm:flex"
+        >
+          {indicator && (
+            <span
+              className={`pointer-events-none absolute h-8 rounded-full bg-white/10 transition-all duration-300 ease-out ${
+                activeLink ? '-translate-y-[calc(50%+4px)]' : '-translate-y-1/2'
+              }`}
+              style={{
+                top: '50%',
+                left: indicator.left,
+                width: indicator.width,
+              }}
+            />
+          )}
+
           {NAV_LINKS.map((link) => (
-            <li key={link.href}>
+            <li key={link.href} className="relative z-10">
               <a
                 href={`/${link.href}`}
-                className="transition-colors hover:text-white"
+                onMouseEnter={(event) =>
+                  moveIndicator(event.currentTarget, link.href)
+                }
+                className={`block px-3 py-1 transition-all duration-300 ${
+                  activeLink === link.href ? '-translate-y-1 text-white' : ''
+                }`}
               >
                 {link.label}
               </a>

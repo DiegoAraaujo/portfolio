@@ -11,12 +11,12 @@ const ContactCard = ({ icon, title, buttonText, href }: ContactCardProps) => {
       <i className={`${icon} flex items-center text-4xl`} />
 
       <span className="flex flex-1 flex-col items-center gap-3">
-        <p className="text-sm font-medium sm:text-base">{title}</p>
+        <p className="text-sm font-medium ">{title}</p>
 
         <a
           href={href}
           target="_blank"
-          className="hover:bg-navy text-navy-deep border-ice w-full max-w-32 rounded-md border bg-white px-3 py-1 text-center text-xs font-medium transition-colors hover:text-white sm:max-w-none sm:px-4 sm:text-sm"
+          className="hover:bg-navy border-ice bg-navy-soft w-full max-w-32 rounded-md border px-3 py-1 text-center text-xs font-medium text-white transition-colors hover:text-white sm:max-w-none sm:px-4 "
         >
           {buttonText}
         </a>
