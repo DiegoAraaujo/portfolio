@@ -7,7 +7,7 @@ const TimeLine = () => (
   <DarkSection>
     <section
       id="career"
-      className="relative m-auto w-full max-w-5xl px-8 py-16"
+      className="relative z-10 m-auto w-full max-w-5xl px-8 py-16"
     >
       <SectionHead
         eyebrow="// TRAJETÓRIA"
