@@ -5,7 +5,7 @@ import ProjectRow from './components/ProjectRow'
 
 const Projects = () => (
   <DarkSection mirrored={true}>
-    <section id="projects" className="m-auto w-full max-w-5xl px-8 py-16">
+    <section id="projects" className="m-auto w-full max-w-5xl px-8 py-16 relative z-10">
       <SectionHead
         eyebrow="// PROJETOS"
         title="O que eu construí"
