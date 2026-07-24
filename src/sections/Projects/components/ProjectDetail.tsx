@@ -14,7 +14,7 @@ const ProjectDetail = () => {
   return (
     <div className="card-notch-lg m-auto w-full max-w-5xl px-8 py-16">
       <Link
-        to={'/'}
+        to="/"
         className="text-navy hover:bg-navy mb-7 inline-flex cursor-pointer items-center gap-2 rounded-full bg-[#EEF3FA] px-8 py-2 text-sm hover:text-white"
       >
         ← voltar
