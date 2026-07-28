@@ -1,5 +1,5 @@
 import type { Project } from '../../../data/projects'
-import { SkillTag } from '../../../components/SkillTag'
+import { SkillTag } from '../../Skills/components/SkillTag'
 import { ProjectVisual } from './ProjectVisual'
 import { Link } from 'react-router-dom'
 

@@ -86,37 +86,13 @@ export interface SoftSkill {
   description: string
 }
 
-export const softSkillHighlights: SoftSkill[] = [
-  {
-    title: 'Comunicação direta',
-    description:
-      'Explica decisões técnicas de forma clara, sem enrolação — para times técnicos e não técnicos.',
-  },
-  {
-    title: 'Organização de eventos técnicos',
-    description:
-      'Planejamento e execução do Devathon, coordenando cronograma, cases e participantes.',
-  },
-  {
-    title: 'Autonomia',
-    description:
-      'Conduz projetos do levantamento de requisitos até o deploy, sem depender de supervisão constante.',
-  },
-  {
-    title: 'Resolução de problemas',
-    description:
-      'Prioriza entender a causa raiz antes de propor solução técnica.',
-  },
-]
-
-export const softSkillTags = [
-  'Adaptabilidade',
-  'Trabalho em equipe',
-  'Comunicação com cliente',
-  'Gestão de tempo',
-  'Atenção a detalhes',
-  'Aprendizado rápido',
-  'Pensamento crítico',
-  'Proatividade',
-  'Colaboração multidisciplinar',
+export const competencies: { label: string; icon?: string }[] = [
+  { label: 'Resolução de problemas' },
+  { label: 'Atitude de dono' },
+  { label: 'Resiliência e foco no resultado' },
+  { label: 'Lidar com pressão e colaboração' },
+  { label: 'Comunicação clara' },
+  { label: 'Pensamento analítico' },
+  { label: 'Aprendizado contínuo' },
+  { label: 'Organização e disciplina' },
 ]
