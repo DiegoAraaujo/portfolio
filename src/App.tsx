@@ -9,11 +9,13 @@ import TimelineDetail from './sections/timeline/components/TimelineDetail'
 import ProjectDetail from './sections/Projects/components/ProjectDetail'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
+import { Toaster } from 'sonner'
 
 const App = () => {
   return (
     <div className="page-bg">
       <BrowserRouter>
+        <Toaster />
         <ScrollToTop />
 
         <Header />

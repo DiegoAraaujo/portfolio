@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import { toast } from 'sonner'
 
 const NAV_LINKS = [
   { href: '#about', label: 'Sobre Mim' },
@@ -25,6 +26,27 @@ export const Header = () => {
     setMenuOpen(false)
   }
 
+  const handleShare = async () => {
+    const shareData = {
+      title: 'José Diêgo Araújo | Portfólio',
+      text: 'Confira meu portfólio!',
+      url: window.location.href,
+    }
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData)
+        return
+      }
+
+      await navigator.clipboard.writeText(window.location.href)
+
+      toast.success('Link copiado com sucesso!')
+    } catch (error) {
+      console.error('Erro ao compartilhar:', error)
+    }
+  }
+
   const moveIndicator = (target: HTMLElement, href: string) => {
     if (!navRef.current) return
 
@@ -48,7 +70,7 @@ export const Header = () => {
             setIndicator(null)
             setActiveLink(null)
           }}
-          className="relative hidden gap-6 text-sm text-[#B9C4D2] sm:flex"
+          className="relative hidden gap-6 text-sm text-[#B9C4D2] md:flex"
         >
           {indicator && (
             <span
@@ -80,7 +102,16 @@ export const Header = () => {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-2.5 sm:flex">
+        <div className="hidden items-center gap-2.5 md:flex">
+          <button
+            type="button"
+            onClick={handleShare}
+            aria-label="Compartilhar portfólio"
+            title="Compartilhar"
+            className="text-navy-deep hover:bg-ice flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full bg-white transition-colors"
+          >
+            <i className="bi bi-share-fill" />
+          </button>
           <a
             href="https://github.com/DiegoAraaujo"
             target="_blank"
@@ -103,7 +134,7 @@ export const Header = () => {
         </div>
       </div>
 
-      <div className="flex w-full justify-end sm:hidden">
+      <div className="flex w-full justify-end md:hidden">
         <button
           type="button"
           aria-label="Abrir menu"
@@ -157,6 +188,15 @@ export const Header = () => {
         </nav>
 
         <div className="mt-auto flex gap-3 border-t border-white/10 pt-6">
+          <button
+            type="button"
+            onClick={handleShare}
+            aria-label="Compartilhar portfólio"
+            title="Compartilhar"
+            className="text-navy-deep hover:bg-ice flex h-10 w-10 items-center justify-center rounded-full bg-white transition-colors"
+          >
+            <i className="bi bi-share-fill text-lg" />
+          </button>
           <a
             href="https://github.com/DiegoAraaujo"
             target="_blank"
