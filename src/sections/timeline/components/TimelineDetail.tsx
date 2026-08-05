@@ -35,21 +35,23 @@ const TimelineDetail = () => {
           {timelineItem.detail}
         </p>
       </div>
-      <div>
-        <h3 className="text-steel mb-3 font-mono text-xs tracking-wide uppercase">
-          Destaques
-        </h3>
-        <ul className="flex flex-col gap-2.5">
-          {timelineItem.highlights.map((item) => (
-            <li
-              key={item}
-              className="before:bg-steel relative max-w-[60ch] pl-4.5 text-sm text-[#333] before:absolute before:top-2.25 before:left-0 before:h-1.5 before:w-1.5 before:rotate-45 before:content-['']"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
+      {timelineItem.highlights.length > 0 && (
+        <div>
+          <h3 className="text-steel mb-3 font-mono text-xs tracking-wide uppercase">
+            Destaques
+          </h3>
+          <ul className="flex flex-col gap-2.5">
+            {timelineItem.highlights.map((item) => (
+              <li
+                key={item}
+                className="before:bg-steel relative max-w-[60ch] pl-4.5 text-sm text-[#333] before:absolute before:top-2.25 before:left-0 before:h-1.5 before:w-1.5 before:rotate-45 before:content-['']"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   )
 }

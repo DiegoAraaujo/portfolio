@@ -72,4 +72,18 @@ export const timeline: TimelineEntry[] = [
     side: 'left',
     icon: 'briefcase',
   },
+  {
+    id: 'lidex-solucoes-digitais',
+    year: 'Ago 2026 – atual',
+    title: 'Desenvolvedor Full Stack — Lidex Soluções Digitais',
+    cardDescription:
+      'Início como estagiário Full Stack na Lidex Soluções Digitais.',
+    tagline: 'Novo estágio como desenvolvedor Full Stack.',
+    detail:
+      'Início do estágio como desenvolvedor Full Stack na Lidex Soluções Digitais.',
+    highlights: [],
+    side: 'right',
+    current: true,
+    icon: 'briefcase',
+  },
 ]
